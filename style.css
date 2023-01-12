@@ -1,0 +1,102 @@
+#quotes {
+    font-family: 'Fredoka One';
+    font-size: 25px;
+}
+
+#hider {
+    font-family: 'Fredoka One';
+    font-size: 50px;
+    padding-top: 10%;
+}
+
+#btn {
+    width: auto;
+    border-radius: 10px;
+    padding: 10px 35px;
+    background-color: #4FA095;
+    border-color: #4FA095;
+}
+
+#tempdiv {
+    float: left;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-wrap: 'wrap';
+    justify-content: 'center';
+    align-items: 'center';
+    background-color: #BAD1C2;
+    border-radius: 10px;
+
+    animation: fade-in 0.6s;
+}
+
+.fade-out-container {
+    animation: fade-out 0.3s;
+}
+
+#angry{
+    background-color: #FF6464;
+    border: none;
+}
+
+#sad{
+    background-color: #6FB2D2;
+    border: none;
+}
+
+#excited{
+    background-color: #82CD47;
+    border: none;
+}
+
+#gloomy{
+    background-color: #D0C9C0;
+    border: none;
+}
+
+#happy{
+    background-color: #A4BE7B;
+    border: none;
+}
+
+.suasana-hati{
+    text-align: center;
+    
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
