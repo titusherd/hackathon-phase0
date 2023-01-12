@@ -1,65 +1,77 @@
- <!--
-HACKTIV8 REGISTRATION FORM
-- DIRECTION
-    Hacktiv8 ingin membuat web untuk halaman registrasi, namun developer hacktiv8 yang ditugaskan untuk membuat ini tidak dapat melanjutkan nya dikarenakan sakit. 
-    Bantulah Hacktiv8 untuk menyempurnakan tampilan web yang sudah dibuat oleh developer sebelumnya!
-
-    Kalian akan diberikan dua file yaitu:
-        1. 3.html
-        2. 3.css
-    File diatas sudah berisikan kode-kode yang sudah dikerjakan oleh developer Hacktiv8 sebelumnya, namun masih belum sempurna.
-    Tugas kalian adalah menyelesaikan kode di dalam file `3.html` agar tampilan web nya sesuai dengan yang diharapkan.
-- NOTES
-    Contoh tampilan website yang diharapkan bisa dilihat di file `3.png`
--->
-
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Fredoka+One&family=Maven+Pro:wght@400;500&family=Mulish:wght@500;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Registration Form</title>
-</head>
-<body>  
-    <div class="container">
-        <!-- <div class="icon" style="width: 45%;display: flex;">
-            <img src="https://blog.hacktiv8.com/content/images/2018/01/AppIcon.jpg" alt="logo hacktiv8">
-        </div> -->
-        <div class="form" style="display: flex;flex-direction: column;">
-            <h1>Lorem Ipsum</h1>
-            <form style="background-color: white; color: black;">
-                <div class="input-form">
-                    <!-- <div class="full-name"> -->
-                        <div class="first-name">
-                            <label for="fname">
-                                How's your day George?
-                            </label>
-                            <input type="text" id="fname" name="fname" >
-                        <!-- </div> -->
-                    </div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" >
-                    <label for="pnumber">Phone Number</label>
-                    <input type="number" id="pnumber" name="pnumber" >
-                </div>
-                <div class="button">
-                    <button id="submit-button" type="submit">REGISTER NOW</button>
-                </div>
-            </form>
-        </div>
-    </div>
+<html>
 
-    <script>
-        document.getElementById("submit-button").addEventListener("click", function(event){
-            event.preventDefault()
-            alert("Thank you for your registration!")
-        });
-    </script>
+<head>
+    <title>Review Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-pattern">
+
+    <div class="box-container text-center">
+        <h2 class="title">Lorem Ipsum</h2>
+        <div class="quote">
+            <h2 class="quote-of-the-day">Quotes Of The Day</h2>
+            <p class="quote-of-the-day-text">"“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor”</p>
+        </div>
+        <!-- <form> -->
+        <!-- <p id="question"></p> -->
+        <!-- <input id="answer"> -->
+        <!-- <input type="button" value="Post" id="btnPost" /> -->
+
+
+        <!-- </form> -->
+            <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
+            <input class="form-control form-control-lg write-form" type="text" placeholder="How's your day?" aria-label=".form-control-lg example">
+        </form>
+        <div class="moodButton">
+            <button type="button" class="btn" style="background-color: #FFFFA0;">Happy</button>
+            <button type="button" class="btn" style="background-color: #FFCCB2;">Excited</button>
+            <button type="button" class="btn" style="background-color: #EDEAE4;">Bored</button>
+            <button type="button" class="btn" style="background-color: #EBD0E0;">Tired</button>
+            <button type="button" class="btn" style="background-color: #CDEFF1;">Sad</button>
+            <div class="post-button">
+                <button class="btn btn-primary" type="submit">Post</button>
+            </div>
+        </div>
+        
+        <div class="your-post">
+            <h2 id>Your Post</h2>
+            <div class="shadow-sm p-4 mb-2 ounded" style="background-color: #FFFFA0;">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do
+                eiusmod tempor</div>
+            <div class="shadow-sm p-4 mb-2 rounded" style="background-color: #FFCCB2;">Lorem ipsum dolor sit amet,
+                consectetur adipiscing
+                elit, sed do
+                eiusmod tempor</div>
+            <div class="shadow-sm p-4 mb-2 rounded" style="background-color: #EDEAE4;">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do
+                eiusmod tempor</div>
+            <div class="shadow-sm p-4 mb-2 rounded" style="background-color: #EBD0E0;">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do
+                eiusmod tempor</div>
+            <div class="shadow-sm p-4 mb-2 rounded" style="background-color: #CDEFF1;">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do
+                eiusmod tempor</div>
+        </div>
+
+        <!-- <input type="button" value= "Another Question" id="btnAnotherQuestion"/> -->
+    </div>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
