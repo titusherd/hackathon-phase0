@@ -1,5 +1,5 @@
 /**
- *  Code untuk database :)
+ * 
  */
 
 let loginDb = [
@@ -62,3 +62,10 @@ let userDb = [
 
 let mail = loginDb[0].email;
 let pass = loginDb[0].password;
+
+for (let i = 0; i < userDb.length; i++) {
+    const perUser = userDb[i];
+    let perNode = userDb[i].status;
+    console.log(perUser.username, perUser.age);
+    console.log(perNode);
+}
