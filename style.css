@@ -1,3 +1,4 @@
+back-end
 #quotes {
     font-family: 'Fredoka One';
     font-size: 30px;
@@ -123,4 +124,45 @@
     100% {
         opacity: 0;
     }
+=======
+.box-container {
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 900px;
+    margin: 120px auto;  
+    padding: 40px;
+    border-radius: 10px;
+    height: 1000px;
+}
+
+.quote{
+    text-align: left;
+    padding: 10px 15px;
+    margin: 15px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.fredoka-one{
+    font-family: 'Fredoka One', cursive;
+}
+
+.your-post{
+    margin: 25px;
+    text-align: left;
+}
+
+/* After using Bootstrap  */
+
+.moodButton {
+    text-align: left;
+    color: black;
+}
+
+.post-button{
+    text-align: right;
+  
+main
 }
