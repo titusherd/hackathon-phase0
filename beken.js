@@ -48,6 +48,8 @@ let quotes = {
     }
 };
 
+let h1 = document.querySelector('#hider');
+h1.innerText = 'Mental health Journal';
 
 let moods = 'Happy';
 let color = '';
@@ -66,6 +68,7 @@ angry.addEventListener("click", function (event) {
     moods = 'Angry';
     color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h1.style.color = quotes[moods].color;
 })
 
 sad.addEventListener("click", function (event) {
@@ -73,6 +76,7 @@ sad.addEventListener("click", function (event) {
     moods = 'Sad';
     color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h1.style.color = quotes[moods].color;
 })
 
 excited.addEventListener("click", function (event) {
@@ -80,6 +84,7 @@ excited.addEventListener("click", function (event) {
     moods = 'Excited';
     color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h1.style.color = quotes[moods].color;
 })
 
 gloomy.addEventListener("click", function (event) {
@@ -87,6 +92,7 @@ gloomy.addEventListener("click", function (event) {
     moods = 'Gloomy';
     color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h1.style.color = '#635666';
 })
 
 happy.addEventListener("click", function (event) {
@@ -94,6 +100,7 @@ happy.addEventListener("click", function (event) {
     moods = 'Happy';
     color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h1.style.color = quotes[moods].color;
 })
 
 
@@ -102,8 +109,6 @@ const dataContainer = document.querySelector('.dataContainer');
 dataContainer.style.padding = '60px';
 
 // Penggunaan Header 
-let h1 = document.querySelector('#hider');
-h1.innerText = 'Mental health Journal';
 
 
 //Quotes
@@ -126,18 +131,19 @@ const btn = document.getElementById('btn');
 
 btn.addEventListener("click", function (event) {
     event.preventDefault();
-    let tempdiv = document.createElement('div');
-    tempdiv.setAttribute("id", "tempdiv");
 
     if (!nameField.value) {
         alert('Masukan keluhan anda');
     } else {
-        tempdiv.style.backgroundColor = quotes[moods].color;
         db_sementara.push(nameField.value);
+        let tempdiv = document.createElement('div');
+        tempdiv.setAttribute("id", "tempdiv");
+        tempdiv.style.backgroundColor = quotes[moods].color;
         tempdiv.innerText = `${today} \n ${nameField.value}`;
         tempdiv.setAttribute("class", "mt-2 col-md-12")
         tempdiv.style.width = '20%';
         dev.appendChild(tempdiv);
+        tempdiv.style.animation = "fade-in 0.6s";
         dataContainer.appendChild(dev)
         console.log(db_sementara);
     }
