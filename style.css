@@ -29,7 +29,7 @@
     background-color: #BAD1C2;
     border-radius: 10px;
     width: 50vw;
-    height: 10vw;
+    height: auto;
 }
 
 .fade-out-container {
