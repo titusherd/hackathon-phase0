@@ -70,7 +70,6 @@ let happy = document.getElementById("happy")
 angry.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Angry';
-    color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
     h1.style.color = quotes[moods].color;
 })
@@ -78,7 +77,6 @@ angry.addEventListener("click", function (event) {
 sad.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Sad';
-    color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
     h1.style.color = quotes[moods].color;
 })
@@ -86,7 +84,6 @@ sad.addEventListener("click", function (event) {
 excited.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Excited';
-    color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
     h1.style.color = quotes[moods].color;
 })
@@ -94,7 +91,6 @@ excited.addEventListener("click", function (event) {
 gloomy.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Gloomy';
-    color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
     h1.style.color = '#635666';
 })
@@ -102,7 +98,6 @@ gloomy.addEventListener("click", function (event) {
 happy.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Happy';
-    color = quotes[moods];
     h3.innerText = `"${quotes[moods].quotes[rng]}"`;
     h1.style.color = quotes[moods].color;
 })
@@ -145,6 +140,7 @@ btn.addEventListener("click", function (event) {
         dev.appendChild(tempdiv);
         tempdiv.style.animation = "fade-in 0.6s";
         dataContainer.appendChild(dev)
+        nameField.value = '';
         console.log(db_sementara);
     }
 })
