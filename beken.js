@@ -70,35 +70,35 @@ let happy = document.getElementById("happy")
 angry.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Angry';
-    h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h3.innerText = `"${quotes[moods].quotes[Math.floor(Math.random() * ((quotes[moods].quotes.length - 1) - 0) + 0)]}"`;
     h1.style.color = quotes[moods].color;
 })
 
 sad.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Sad';
-    h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h3.innerText = `"${quotes[moods].quotes[Math.floor(Math.random() * ((quotes[moods].quotes.length - 1) - 0) + 0)]}"`;
     h1.style.color = quotes[moods].color;
 })
 
 excited.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Excited';
-    h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h3.innerText = `"${quotes[moods].quotes[Math.floor(Math.random() * ((quotes[moods].quotes.length - 1) - 0) + 0)]}"`;
     h1.style.color = quotes[moods].color;
 })
 
 gloomy.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Gloomy';
-    h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h3.innerText = `"${quotes[moods].quotes[Math.floor(Math.random() * ((quotes[moods].quotes.length - 1) - 0) + 0)]}"`;
     h1.style.color = '#635666';
 })
 
 happy.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Happy';
-    h3.innerText = `"${quotes[moods].quotes[rng]}"`;
+    h3.innerText = `"${quotes[moods].quotes[Math.floor(Math.random() * ((quotes[moods].quotes.length - 1) - 0) + 0)]}"`;
     h1.style.color = quotes[moods].color;
 })
 
