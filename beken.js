@@ -130,7 +130,13 @@ btn.addEventListener("click", function (event) {
     if (!nameField.value) {
         alert('Masukan keluhan anda');
     } else {
-        db_sementara.push(nameField.value);
+        db_sementara.push(
+            {
+                waktu: today,
+                pesan: nameField.value,
+                mood: moods
+            });
+
         let tempdiv = document.createElement('div');
         tempdiv.setAttribute("id", "tempdiv");
         tempdiv.style.backgroundColor = quotes[moods].color;
