@@ -47,22 +47,26 @@ let quotes = {
         ], color: '#38E54D'
     }
 };
-
+// Menampakkan Header
 let h1 = document.querySelector('#hider');
 h1.innerText = 'Mental health Journal';
 
+// set default moods, warna, rng untuk mengambil quote, dan menampilkan quote
 let moods = 'Happy';
 let color = '';
 let rng = Math.floor(Math.random() * ((quotes[moods].quotes.length - 1) - 0) + 0);
 let h3 = document.querySelector('#quotes');
 h3.innerText = `"${quotes[moods].quotes[rng]}"`
 
+// mengambil kategori dari setiap element dan melakukan event listener
 let angry = document.getElementById('angry');
 let sad = document.getElementById("sad")
 let excited = document.getElementById("excited")
 let gloomy = document.getElementById("gloomy")
 let happy = document.getElementById("happy")
 
+// untuk setiap kategori, ganti warna card yang akan ditampilkan,
+// ganti quote sesuai moods, ganti warna header.
 angry.addEventListener("click", function (event) {
     event.preventDefault();
     moods = 'Angry';
@@ -104,31 +108,27 @@ happy.addEventListener("click", function (event) {
 })
 
 
+
+// mendapatkan user input dari text
 const nameField = document.getElementById('name')
 const dataContainer = document.querySelector('.dataContainer');
 dataContainer.style.padding = '60px';
 
-// Penggunaan Header 
 
-
-//Quotes
-
-
-
-// Get tanggal
+// mendapatkan timestamp
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
-let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let mm = String(today.getMonth() + 1).padStart(2, '0');
 let yyyy = today.getFullYear();
 today = mm + '/' + dd + '/' + yyyy;
 
 
+// membuat dev untuk space card
 const dev = document.createElement('div');
 dev.style.padding = '30px'
-
 const btn = document.getElementById('btn');
 
-
+// button untuk menulis dan post
 btn.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -149,11 +149,12 @@ btn.addEventListener("click", function (event) {
     }
 })
 
+// fungsi untuk menghapus setiap cards
 const btn2 = document.querySelector('.btn2');
-
 function remove(parents, child) {
     parents.removeChild(child);
 }
+
 btn2.addEventListener("click", function (event) {
     event.preventDefault();
     remove(dev, tempdiv);
